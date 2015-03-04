@@ -57,7 +57,7 @@
 #include "temperature.h"
 #include "ultralcd.h"
 #include "language.h"
-#include "Hysteresis.h"
+//#include "Hysteresis.h"
 
 //===========================================================================
 //=============================public variables ============================
@@ -538,7 +538,7 @@ void plan_buffer_line(const float &x, const float &y, const float &z, const floa
 	//Dryrain changes-----------------------
 	#ifdef HYSTERESIS_H
 	//Hysteresis correction if needed
-	hysteresis.InsertCorrection(x,y,z,e);
+	//hysteresis.InsertCorrection(x,y,z,e);
 	#endif
 	//------------------------------
 	
