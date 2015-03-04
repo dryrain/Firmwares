@@ -25,7 +25,7 @@ void watchdog_init()
     _WD_CONTROL_REG = _BV(_WD_CHANGE_BIT) | _BV(WDE);
     _WD_CONTROL_REG = _BV(WDIE) | WDTO_4S;
 #else
-    wdt_enable(WDTO_4S);
+    wdt_enable(WDTO_8S);
 #endif
 }
 
