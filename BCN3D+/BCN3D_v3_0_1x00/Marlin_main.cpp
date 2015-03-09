@@ -155,6 +155,9 @@
 //===========================================================================
 //=============================public variables=============================
 //===========================================================================
+
+float Z_purgador;
+
 #ifdef SDSUPPORT
 CardReader card;
 #endif
@@ -753,6 +756,19 @@ void process_commands()
     switch((int)code_value())
     {
     case 0: // G0 -> G1
+	case 50: //G50 -> Purgat
+	{
+		Z_purgador = current_position[Z_AXIS];
+		break;
+	}
+	
+	case 51: //G50 -> Purgat
+	{
+		// Move Z
+		current_position[Z_AXIS]=Z_purgador;
+		plan_buffer_line(current_position[X_AXIS],current_position[Y_AXIS],current_position[Z_AXIS],current_position[E_AXIS], max_feedrate[Z_AXIS]/2, active_extruder);
+		break;
+	}
     case 1: // G1
       if(Stopped == false) {
         get_coordinates(); // For X Y Z E F
