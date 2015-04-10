@@ -321,10 +321,10 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 // Travel limits after homing
 //Changes Rapduch v.23
 //#define X_MAX_POS 242.5
-#define X_MAX_POS 252
+#define X_MAX_POS 242
 #define X_MIN_POS 0
 //#define Y_MAX_POS 210
-#define Y_MAX_POS 200
+#define Y_MAX_POS 210
 #define Y_MIN_POS 0
 #define Z_MAX_POS 200
 #define Z_MIN_POS 0
@@ -339,7 +339,7 @@ const bool Z_ENDSTOPS_INVERTING = true; // set to true to invert the logic of th
 
 //Manual homing switch locations:
 // For deltabots this means top and center of the cartesian print volume.
-#define MANUAL_X_HOME_POS 0
+#define MANUAL_X_HOME_POS 272
 #define MANUAL_Y_HOME_POS 0
 #define MANUAL_Z_HOME_POS 0
 //#define MANUAL_Z_HOME_POS 402 // For delta: Distance between nozzle and print surface after homing.
